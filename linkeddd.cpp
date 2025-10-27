@@ -36,10 +36,20 @@ int main()
 			
 		}
 	}
+	
+		struct node *firstnode=(struct node *)malloc(sizeof(struct node));
+		firstnode->data=77;
+		firstnode->next=NULL;
+		firstnode->prev=NULL;
+		
+		firstnode->next=head;
+		firstnode->prev=head;
+		head=firstnode;
+	
 	struct node *p=head;
 	while(p!=NULL)
 	{
-		printf("%d",p->data);
+		printf("%d ",p->data);
 		p=p->next;
 	}
 }
