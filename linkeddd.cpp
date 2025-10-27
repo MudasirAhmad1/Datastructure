@@ -3,6 +3,7 @@
 struct node{
 	int data;
 	struct node *next;
+	struct node *prev;
 };
 int main()
 {
@@ -11,6 +12,7 @@ int main()
 	scanf("%d",&n);
 	struct node *head=NULL;
 	struct node *last=NULL;
+	struct node *prev=NULL;	
 	for(int i=0;i<n;i++)
 	{
 		int value;
@@ -19,15 +21,18 @@ int main()
 		struct node *newnode=(struct node *)malloc(sizeof(struct node));
 		newnode->data=value;
 		newnode->next=NULL;
+		newnode->prev=NULL;
 		if(head==NULL)
 		{
 			head=newnode;
 			last=head;
+			head->prev=last;
 		}
 		else
 		{
 			last->next=newnode;
 			last=newnode;
+			
 		}
 	}
 	struct node *p=head;
