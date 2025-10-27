@@ -31,6 +31,7 @@ int main()
 		else
 		{
 			last->next=newnode;
+			newnode->prev=last;
 			last=newnode;
 			
 		}
