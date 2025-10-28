@@ -37,4 +37,9 @@ int main()
 			last=newnode;
 		}
 	}
+	struct node *p=head;
+	do{
+		printf("%d",p->data);
+		p=p->next;
+	}while(p!=head);
 }
