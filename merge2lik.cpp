@@ -36,11 +36,25 @@ int main()
 	fifth->next=first;
 	first->prev=fifth;
 	
+	int a[10];
+	
 	struct node *p=first;
 	do{
+			int i;
 		printf("%d ",p->data);
+			a[i]=p->data;
 		p=p->next;
+	
+	
+		i++;
 	}while(p!=first);
+	
+	printf("\n");
+	for(int i=0;i<6;i++)
+	{
+		
+		printf("%d ",a[i]);
+	}
 	
 //	struct node *q=fourth;
 //	do{
