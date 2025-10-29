@@ -28,4 +28,13 @@ int main()
 			head->prev=last;
 			last->next=head;
 		}
-	
+		else
+		{
+			last->next=newnode;
+			newnode->prev=last;
+			newnode->next=head;
+			head->prev=newnode;
+			last=newnode;
+		}
+	}
+
