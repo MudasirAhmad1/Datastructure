@@ -16,15 +16,20 @@ void pop(int value)
 	else
 	printf("popped:%d\n",stack[top--]);
 }
-
+void peek()
+{
+	if(top==-1)
+	printf("Stack is Full\n");
+	else
+	printf("popped:%d\n",stack[top]);
+}
 
 
 int main()
 {
-	int a[size];
-	int top=-1;
-	
-	
-	
+	push(10);
+	push(30);
+	peek();
+	pop();
 	printf("The world is good:");
 }
