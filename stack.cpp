@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define size=5;
+#define size 5
 int stack[size];
 int top=-1;
 void push(int value)
@@ -9,7 +9,7 @@ void push(int value)
 	else
 	stack[++top]=value;
 }
-void pop(int value)
+void pop()
 {
 	if(top==-1)
 	printf("Stack is Full\n");
