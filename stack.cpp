@@ -9,6 +9,14 @@ void push(int value)
 	else
 	stack[++top]=value;
 }
+void pop(int value)
+{
+	if(top==-1)
+	printf("Stack is Full\n");
+	else
+	printf("popped:%d\n",stack[top--]);
+}
+
 
 
 int main()
