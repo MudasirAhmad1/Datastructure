@@ -49,12 +49,7 @@ int main()
 		i++;
 	}while(p!=first);
 	
-	printf("\n");
-	for(int i=0;i<6;i++)
-	{
-		
-		printf("%d ",a[i]);
-	}
+
 	
 //	struct node *q=fourth;
 //	do{

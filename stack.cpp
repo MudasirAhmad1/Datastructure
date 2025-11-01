@@ -28,7 +28,8 @@ void peek()
 int main()
 {
 	push(10);
-	push(30);
+	push(29);
+	push(9);
 	peek();
 	pop();
 	printf("The world is good:");
