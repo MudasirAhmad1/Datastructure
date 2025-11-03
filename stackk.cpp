@@ -30,6 +30,8 @@ int main()
 	push(4);
 
 	push(78);
+		push(78);
+
 	pop();
 	pop();
 	pop();
