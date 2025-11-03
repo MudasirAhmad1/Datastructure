@@ -21,7 +21,7 @@ void pop()
 	}
 	else
 	{
-		printf("The Number is Popped %d",stack[--top]);
+		printf("The Number is Popped %d \n",stack[--top]);
 	}
 }
 int main()
@@ -30,6 +30,5 @@ int main()
 	push(34);
 	push(78);
 	pop();
-	
 	pop();
 }
