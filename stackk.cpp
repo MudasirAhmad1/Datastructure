@@ -27,8 +27,10 @@ void pop()
 int main()
 {
 	push(5);
+	push(4);
 	push(34);
 	push(78);
+	pop();
 	pop();
 	pop();
 }
