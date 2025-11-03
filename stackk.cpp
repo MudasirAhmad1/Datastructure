@@ -21,14 +21,14 @@ void pop()
 	}
 	else
 	{
-		printf("The Number is Popped %d \n",stack[--top]);
+		printf("The Number is Popped %d \n",stack[top--]);
 	}
 }
 int main()
 {
 	push(5);
 	push(4);
-	push(34);
+
 	push(78);
 	pop();
 	pop();
