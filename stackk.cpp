@@ -6,6 +6,28 @@ void push(int value)
 {
 	if(top==size-1)
 	{
-		printf("The Stack is Empty");
+		printf("The Stack is Full");
 	}
+	else
+	{
+		stack[++top]=value;
+	}
+}
+void pop()
+{
+	if(top==-1)
+	{
+		printf("The stack is Empaty");
+	}
+	else
+	{
+		printf("The Number is Popped %d",stack[--top]);
+	}
+}
+int main()
+{
+	push(5);
+	push(78);
+	
+	pop();
 }
