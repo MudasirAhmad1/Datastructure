@@ -14,3 +14,19 @@ void push(int value)
 	top=newnode;
 	printf("The Number is Pushed into the stack:%d",value);
 }
+void pop()
+{
+	if(top==NULL)
+	{
+		printf("Stack is Empty:");
+		return;
+	}
+	else
+	{
+		struct node *temp=top;
+		printf("The Number is popped %d",top->data);
+		top=top->next;
+		free(temp);
+	}
+}
+
