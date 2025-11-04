@@ -1,63 +1,32 @@
 #include<stdio.h>
-#include<stdlib.h>
-struct node 
-{
-	int data;
-	struct node *next;
-};
-struct node *top=NULL;
+#define size 5
+int stack[size];
+int top=-1;
 void push(int value)
 {
-	struct node * newnode=(struct node *)malloc(sizeof(struct node));
-	newnode->data=value;
-	newnode->next=top;
-	top=newnode;
-	printf("\n The Number is Pushed into the stack:%d",value);
+	if(top==size-1)
+	{
+		printf("Stack is Full:");
+	}
+	else{
+	stack[++top]=value;
+	printf("Stack:%d",stack[top]);	
+	}
 }
 void pop()
 {
-	if(top==NULL)
+	if(top==-1)
 	{
-		printf("Stack is Empty:");
-		return;
+		printf("The stack is Empty:");
 	}
 	else
 	{
-		struct node *temp=top;
-		printf("\n The Number is popped %d",top->data);
-		top=top->next;
-		free(temp);
+		printf("The Number is Popped %d",stack[top--]);
 	}
-}
-void peek()
-{
-	if(top==NULL)
-	{
-		printf("\n The Stack is EMpty:");
-	}
-	else
-	{
-		printf("\n The data of the Stack %d ",top->data);
-	}
-}
-void display()
-{
-struct node *p=top;
-while(p!=NULL)
-{
-	printf("\n");
-	printf("%d",p->data);
-	p=p->next;
-}
 }
 int main()
 {
-	push(33);
-	push(45);
-	push(95);
-//	pop();
-//	pop();
-	peek();
-	peek();
-	display();
+	push(56);
+	push(67);
+	pop();
 }
