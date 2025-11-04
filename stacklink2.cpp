@@ -29,10 +29,22 @@ void pop()
 		free(temp);
 	}
 }
+void peek()
+{
+	if(top==NULL)
+	{
+		printf("\n The Stack is EMpty:");
+	}
+	else
+	{
+		printf("\n The data of the Stack %d ",top->data);
+	}
+}
 int main()
 {
 	push(33);
 	push(45);
 	pop();
-	pop();
+//	pop();
+	peek();
 }
