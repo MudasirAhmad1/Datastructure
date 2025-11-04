@@ -40,11 +40,22 @@ void peek()
 		printf("\n The data of the Stack %d ",top->data);
 	}
 }
+void display()
+{
+struct node *p=top;
+while(p!=NULL)
+{
+	printf("\n");
+	printf("%d",p->data);
+	p=p->next;
+}
+}
 int main()
 {
 	push(33);
 	push(45);
-	pop();
+//	pop();
 //	pop();
 	peek();
+	display();
 }
