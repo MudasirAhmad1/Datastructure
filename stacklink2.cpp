@@ -54,6 +54,7 @@ int main()
 {
 	push(33);
 	push(45);
+	push(45);
 //	pop();
 //	pop();
 	peek();
