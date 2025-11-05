@@ -1,52 +1,28 @@
 #include<stdio.h>
-#include<conio.h>
-#define size 5
-int stack[size];
-int top=-1;
+#include<stdlib.h>
+struct node {
+	int data;
+	struct node *next;
+};
+struct node *top=NULL;
 void push(int value)
 {
-	if(top==size-1)
-	{
-		printf(" \n The Stack is Full:");
-	}
-	else
-	{
-		printf(" \n The Element is push into the stack:%d",value);
-		stack[++top]=value;
-	}
+	struct node *newnode=(struct node *)malloc(sizeof(struct node));
+	newnode->data=value;
+	newnode->next=top;
+	top=newnode;
+	printf(" \n The Number is Have been Pushed:%d",value);
 }
 void pop()
 {
-	if(top==-1)
-	{
-		printf("\n The Stack is Empty:");
-	}
-	else
-	{
-		printf("\n The Element is Popped %d ",stack[top--]);
-	}
-}
-void peek()
-{
-	if(top==-1)
-	{
-		printf("The stack is Empty:");
-	}
-	else
-	{
-		printf("%d",stack[top]);
-	}
+	struct node *temp=top;
+	printf("The elemet is popped:%d",top->data);
+	top=top->next;
+	free(temp);
 }
 int main()
 {
-	push(56);
-	push(45);
-	push(5);
-	push(5);
+	push(34);
+	push(12);
 	pop();
-	pop();
-	pop();
-	pop();
-	peek();
 }
-
