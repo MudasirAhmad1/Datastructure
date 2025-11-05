@@ -58,4 +58,6 @@ int main()
 	pop();
 	peek();
 	display();
+	peek();
+	display();
 }
