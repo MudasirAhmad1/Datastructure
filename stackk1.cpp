@@ -46,6 +46,7 @@ int main()
 	pop();
 	pop();
 	pop();
+	pop();
 	peek();
 }
 
