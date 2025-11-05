@@ -26,6 +26,17 @@ void pop()
 		printf("\n The Element is Popped %d ",stack[top--]);
 	}
 }
+void peek()
+{
+	if(top==-1)
+	{
+		printf("The stack is Empty:");
+	}
+	else
+	{
+		printf("%d",stack[top]);
+	}
+}
 int main()
 {
 	push(56);
@@ -35,5 +46,6 @@ int main()
 	pop();
 	pop();
 	pop();
+	peek();
 }
 
