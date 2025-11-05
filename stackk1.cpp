@@ -50,6 +50,9 @@ void display()
 int main()
 {
 	push(34);
+	push(34);
+	push(34);
+	push(34);
 	push(12);
 	push(34);
 	pop();
