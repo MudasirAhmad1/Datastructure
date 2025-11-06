@@ -16,9 +16,15 @@ printf("The Number is Pushed into the stack %d",value);
 void pop()
 {
 	struct node *temp=top;
+	printf("The Number poped %d" top->data);
 	top=top->next;
 	free(temp);
-	printf("The Number pop")
+}
+int main()
+{
+	push(45);
+	push(23);
+	pop();
 }
 
 
