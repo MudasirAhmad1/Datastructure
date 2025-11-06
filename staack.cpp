@@ -11,18 +11,22 @@ struct node *newnode=(struct node *)malloc(sizeof(struct node));
 newnode->data=value;
 newnode->next=top;
 top=newnode;
-printf("The Number is Pushed into the stack %d",value);
+printf(" \n The Number is Pushed into the stack %d",value);
 }
 void pop()
 {
 	struct node *temp=top;
-	printf("The Number poped %d" top->data);
+	printf("\n The Number poped %d", top->data);
 	top=top->next;
 	free(temp);
 }
 int main()
 {
 	push(45);
+	push(45);
+	push(45);
+	push(45);
+	
 	push(23);
 	pop();
 }
