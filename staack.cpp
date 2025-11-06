@@ -26,6 +26,10 @@ int main()
 	push(45);
 	push(45);
 	push(45);
+	push(45);
+	push(45);
+	push(45);
+	push(45);
 	
 	push(23);
 	pop();
