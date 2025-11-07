@@ -5,12 +5,19 @@ struct node{
 	struct node *next;
 };
 struct node *top=NULL;
+struct node *newnode=(struct node *)malloc(sizeof(struct node));
 void push(int value)
 {
-	struct node *newnode=(struct node *)malloc(sizeof(struct node));
+	if(newnode==NULL)
+	{
+		printf("Stack is Full:");
+	}
+	else
+	{
 	newnode->data=value;
 	newnode->next=top;
 	top=newnode;
+}
 }
 void pop()
 {
