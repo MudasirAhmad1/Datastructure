@@ -38,7 +38,6 @@ int main() {
     push("Muzamil");
     push("Mudasir");
     pop();
-    pop();
     pop(); // test empty
     return 0;
 }
