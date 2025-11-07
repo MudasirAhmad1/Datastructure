@@ -33,12 +33,29 @@ void pop() {
         free(temp);
     }
 }
-
+int isbalanced(value[])
+{
+	for(i=0;value[i]!='\0';i++)
+	{
+		if(value[i]=='(')
+		{
+			push(value[i]);
+		}
+		elseif(value[i]==')')
+		{
+			if(top==NULL)
+			return 0;
+			pop();
+		}
+	}
+}
+if(top==NULL)
+return 1;
+else
+return 0;
 int main() {
-    push("Muzamil");
-    push("Mudasir");
-    pop();
-    pop(); // test empty
+    char name[23]="((a+b)*(c+b))";
+    printf("d",isbalanced(name));
     return 0;
 }
 
