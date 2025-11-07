@@ -1,41 +1,27 @@
 #include<stdio.h>
 #include<stdlib.h>
-struct node{
-	char data;
+struct node {
+	int data;
 	struct node *next;
 };
 struct node *top=NULL;
-struct node *newnode=(struct node *)malloc(sizeof(struct node));
 void push(int value)
 {
-	if(newnode==NULL)
-	{
-		printf("Stack is Full:");
-	}
-	else
-	{
+	struct node *newnode=(struct node *)malloc(sizeof(struct node));
 	newnode->data=value;
 	newnode->next=top;
 	top=newnode;
-}
+	printf("\n The Number is Pushed %d: ",value);
 }
 void pop()
 {
-	if(top==NULL)
-	{
-		printf("\n The Stack is Empty:");
-	}
-	else
-	{
-		struct node *temp=top;
-		top=top->next;
-		printf("%d The Number is Popped %d",top->data);
-		free(temp);
-	}
+	struct node *temp=top;
+	printf("\n The Number is Popped %d",top->data);
+	top=top->next;
+	free(temp);
 }
-int main()
-{
-	push(56);
+int main(){
+	push(45);
 	push(3);
 	pop();
 }
