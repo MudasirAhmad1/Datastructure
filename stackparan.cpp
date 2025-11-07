@@ -6,13 +6,14 @@ struct node {
 	struct node *next;
 };
 struct node *top=NULL;
-void push(char value)
+void push(char value[])
 {
 	struct node *newnode=(struct node *)malloc(sizeof(struct node));
-	newnode->data=value;
+	strcpy(newnode->data, value);
+//	newnode->data=value;
 	newnode->next=top;
 	top=newnode;
-	printf("\n The Number is Pushed %c: ",value);
+	printf("\n The Number is Pushed %s: ",value);
 }
 void pop()
 {
@@ -23,7 +24,7 @@ if(top==NULL)
 else
 {
 	struct node *temp=top;
-	printf("\n The Number is Popped %c",top->data);
+	printf("\n The Number is Popped %s",top->data);
 	top=top->next;
 	free(temp);
 }
