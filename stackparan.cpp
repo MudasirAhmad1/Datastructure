@@ -39,9 +39,9 @@ int balance(char *exp)
 	int i;
 	for(i=0;exp[i]!='\0';i++)
 	{
-		if(exp[i]=='(')
+		if(exp[i]=='(';
 		push(exp[i]);
-		elseif(exp[i]==')')
+		else if(exp[i]==')')
 		{
 			if(top==NULL)
 			{
@@ -57,6 +57,7 @@ int balance(char *exp)
 }
 int main()
 {
-	push('m');
-	pop();
+	char *exp="((a+b)*(c+d))";
+	printf("\n %d is balanced",balance(exp));
+	return 0;
 }
