@@ -39,9 +39,10 @@ void clear_stack() {
 int balance(char *exp) {
     int i;
     for (i = 0; exp[i] != '\0'; i++) {
-        if (exp[i] == '(')
-            push(exp[i]);
-        else if (exp[i] == ')') {
+    	char ch=exp[i];
+        if (ch== '('||ch=='{'||ch=='[')
+            push(ch);
+        else if (ch== ')'||ch=='}'||ch==']') {
             if (top == NULL) {
                 clear_stack(); // To avoid memory leak
                 return 0;
@@ -55,7 +56,7 @@ int balance(char *exp) {
 }
 
 int main() {
-    char *exp = "((a+b)*(c+d))";
+    char *exp = "{((a+b)*([c+d))}";
     if (balance(exp)) {
         printf("\nThe expression is balanced\n");
     } else {
