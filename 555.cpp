@@ -1,12 +1,13 @@
 #include<stdio.h>
-#include<conio.h>
-struct rectangle{
-	int length;
-	int breadth;
-};
+void data(int a,int b)
+{
+	int result;
+	result=a+b;
+	printf("The Result is :%d",result);
+}
 int main()
 {
-struct rectangle r1={1,2};
-r1.breadth=99;
-printf("%d",r1.breadth);
+	int a=99;
+	int b=88;
+	data(a,b);
 }
