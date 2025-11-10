@@ -1,13 +1,17 @@
 #include<stdio.h>
-void data(int a,int b)
+void swap(int *a,int *b)
 {
-	int result;
-	result=a+b;
-	printf("The Result is :%d",result);
+	int temp;
+	temp=*a;
+	*a=*b;
+	*b=temp;
+	printf("\n The swap is a and b %d %d",*a,*b);
 }
 int main()
 {
-	int a=99;
-	int b=88;
-	data(a,b);
+	int a=9;
+	int b=8;
+	printf("\n Before the Swap:%d %d",a,b);
+	swap(&a,&b);
+	printf("\n Before the Swap:%d %d",a,b);
 }
