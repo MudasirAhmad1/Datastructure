@@ -1,17 +1,34 @@
 #include<stdio.h>
-void swap(int *a,int *b)
+struct cricle{
+	int l=56;
+	int b=78;
+};
+void change(struct cricle c2)
 {
-	int temp;
-	temp=*a;
-	*a=*b;
-	*b=temp;
-	printf("\n The swap is a and b %d %d",*a,*b);
+	c2.l=9;
+	printf("\n The 2 cricle is %d %d",c2.l,c2.b);
 }
 int main()
 {
-	int a=9;
-	int b=8;
-	printf("\n Before the Swap:%d %d",a,b);
-	swap(&a,&b);
-	printf("\n Before the Swap:%d %d",a,b);
+	struct cricle c1;
+	
+	change(c1);
+	printf("\n The cricle is : %d %d",c1.l,c1.b);
+}
+#include<stdio.h>
+struct cricle{
+	int l=56;
+	int b=78;
+};
+void change(struct cricle c2)
+{
+	c2.l=9;
+	printf("\n The 2 cricle is %d %d",c2.l,c2.b);
+}
+int main()
+{
+	struct cricle c1;
+	
+	change(c1);
+	printf("\n The cricle is : %d %d",c1.l,c1.b);
 }
