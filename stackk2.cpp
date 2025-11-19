@@ -32,5 +32,6 @@ int main()
 {
 	push(45);
 	push(2);
+	push(1);
 	pop();
 }
