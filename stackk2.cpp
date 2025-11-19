@@ -1,48 +1,36 @@
 #include<stdio.h>
-#define size 5
-int top=-1;
-int stack[size];
+#include<stdlib.h>
+struct node{
+	int data;
+	struct node *next;
+};
+struct node *top=NULL;
 void push(int value)
 {
-	if(top==size-1)
-	{
-		printf("\n The Stack is Full:");
-	}
-	else
-	{
-		printf("\n The Number is Pushed into the stack:%d",value);
-		stack[++top]=value;
-	}
+	printf("\n The Number is Pushed into the stack: %d",value);
+	struct node *newnode=(struct node *)malloc(sizeof(struct node));
+	newnode->data=value;
+	newnode->next=top;
+	top=newnode;
 }
 void pop()
 {
-	if(top==-1)
+	if(top==NULL)
 	{
-		printf("The Stack is Empty:");
+		printf("\n The stack is Empty:");
 	}
 	else
 	{
-		printf("\n The Number has been Popped Out: %d", stack[top--]);
-	}
-}
-void peek()
-{
-	if(top==-1)
-	{
-		printf("\n The stack is Empty: ");
-	}
-	else
-	{
-		printf("\n The Peek Element is %d",stack[top]);
+	struct node *temp=(struct node *)malloc(sizeof(struct node));
+	printf("\n The Number is popped %d",top->data);
+	temp=top;
+	top=top->next;
+	free(temp);	
 	}
 }
 int main()
 {
-	push(1);
+	push(45);
 	push(2);
-	push(3);
-	push(4);
-	push(5);
 	pop();
-	peek();
 }
