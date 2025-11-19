@@ -44,4 +44,4 @@ int main()
 	push(2);
 	pop();
 	display();
-}
+} n
