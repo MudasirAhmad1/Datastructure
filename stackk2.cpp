@@ -25,13 +25,24 @@ void pop()
 		printf("\n The Number has been Popped Out: %d", stack[top--]);
 	}
 }
+void peek()
+{
+	if(top==-1)
+	{
+		printf("\n The stack is Empty: ");
+	}
+	else
+	{
+		printf("\n The Peek Element is %d",stack[top]);
+	}
+}
 int main()
 {
-//	push(34);
-//	push(34);
-//	push(34);
-//	push(34);
-//	push(34);
-//	push(34);
+	push(1);
+	push(2);
+	push(3);
+	push(4);
+	push(5);
 	pop();
+	peek();
 }
