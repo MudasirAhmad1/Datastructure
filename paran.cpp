@@ -56,5 +56,5 @@ int main()
 	if(balance(exp))
 	printf("Parathesis is balance");
 	else
-	printf("Not Balanced");
+	printf("Paranthesis Not Balanced");
 }
