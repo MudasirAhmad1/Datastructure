@@ -52,7 +52,7 @@ int  balance(char *exp)
 }
 int main()
 {
-	char *exp="((a+b)*(c+d))";
+	char *exp="{((a+b)*(c+d))}";
 	if(balance(exp))
 	printf("Parathesis is balance");
 	else
