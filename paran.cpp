@@ -23,7 +23,9 @@ void pop()
 	}
 	else
 	{
-		printf("\n The Char is popped out:%c",);
+//		printf("\n The Char is popped out:%c",);
+//		printf("\n The Char is popped out:%c",);
+//		printf("\n The Char is popped out:%c",);
 		stack[top--];
 	}
 }
