@@ -10,7 +10,7 @@ void push(char value)
 	}
 	else
 	{
-//		printf("\n The Char is pushed into the stack:%c",value);
+		printf("\n The Char is pushed into the stack:%c",value);
 		stack[++top]=value;
 	}
 	
@@ -23,7 +23,7 @@ void pop()
 	}
 	else
 	{
-//		printf("\n The Char is popped out:%c",);
+		printf("\n The Char is popped out:%c",);
 		stack[top--];
 	}
 }
