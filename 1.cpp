@@ -18,11 +18,13 @@ int main()
 	second->data=56;
 	second->next=third;
 	third->data=23;
+	third->next=NULL;
 	
 	struct node *p=head;
 	while(p!=NULL)
 	{
-		printf("The Number is %d",p->data);
+		printf("\n The Number is %d",p->data);
+		p=p->next;
 		
 	}
 }
