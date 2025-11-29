@@ -20,6 +20,11 @@ int main()
 	third->data=23;
 	third->next=NULL;
 	
+	struct node *newnode=(struct node *)malloc(sizeof(struct node));
+	newnode->data=90;
+	third->next=newnode;
+	newnode->next=NULL;
+	
 	struct node *p=head;
 	while(p!=NULL)
 	{
