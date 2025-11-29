@@ -25,6 +25,9 @@ int main()
 	third->next=newnode;
 	newnode->next=NULL;
 	
+
+	
+	
 	struct node *p=head;
 	while(p!=NULL)
 	{
