@@ -1,15 +1,13 @@
 #include<stdio.h>
-int swap(int *a,int *b)
+void sum(int a[])
 {
-	int temp;
-	temp=*a;
-	*a=*b;
-	*b=temp;
+for(int i=0;i<6;i++)
+{
+	printf("\n %d",a[i]);
+	}	
 }
 int main()
 {
-	int a=10;
-	int b=20;
-	swap(&a,&b);
-	printf("a: %d b:%d",a,b);
+	int a[]={1,2,3,4,5,5};
+	sum(a);
 }
