@@ -1,22 +1,19 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
-int main()
+struct node{
+	int length;
+	int breadth;
+};
+void swap(struct node n1)
 {
-	int *arr;
-	int n;
-	printf("\n Enter the Elements of the array:");
-	scanf("%d",&n);
-	arr=(int *)malloc(n*sizeof(int));
-	for(int i=0;i<n;i++)
-	{
-		printf("Enter the NUmber:");
-		scanf("%d", &arr[i]);
-	}
-	
-	for(int i=0;i<n;i++)
-	{
-		printf("%d",arr[i]);
-	}
-	
+	int temp;
+	temp=n1.length*n1.breadth;
+	printf("%d",temp);
+}
+int main()
+{	
+struct node n1={10,5};
+swap(n1);
+
 }
