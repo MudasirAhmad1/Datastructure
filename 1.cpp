@@ -5,6 +5,11 @@ struct node{
 	int length;
 	int breadth;
 };
+void intial(struct node *p)
+{
+	p->length=4;
+	p->breadth=3;
+}
 void swap(struct node n1)
 {
 	int temp;
@@ -13,7 +18,9 @@ void swap(struct node n1)
 }
 int main()
 {	
-struct node n1={10,5};
+struct node n1;
+intial(&n1);
 swap(n1);
+
 
 }
