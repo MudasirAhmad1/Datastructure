@@ -11,6 +11,8 @@ int main()
 	int n;
 	printf("Enter the Data:");
 	scanf("%d",&n);
+	//grgrgbrfhefjkefjk/
+	//ebkjefkjebfjkbejkfb
 	struct node *first=(struct node *)malloc(sizeof(struct node));
 	struct node *second=(struct node *)malloc(sizeof(struct node));
 	struct node *third=(struct node *)malloc(sizeof(struct node));
