@@ -2,6 +2,7 @@
 #include<stdlib.h>
 int main()
 {
+	//Mudasir aisd 
 	int *p[3];
 	p[0]=new int[4];
 	p[1]=new int[4];
