@@ -3,8 +3,9 @@ int add(int n)
 {
 	if(n>0)
 	{
-		add(n-1);
+		
 		printf("%d: ",n);
+		add(n-1);
 		
 	}
 }
